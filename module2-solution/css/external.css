@@ -28,13 +28,13 @@ div.back {  /*Don't use "p", use "div" here.*/
 
 .title {
   border: 1px solid black;
-  position: absolute;
-  top:0px;
-  right:0px;
+  position: relative;
+  float: right;
   text-align: center;
   text-transform: capitalize;
   width: 140px;
   height: 30px;
+  margin-top:0;
   margin-bottom: 10px;
   font-size: 20px;
   font-family: : Arial, Helvetica, sans-serif;
@@ -45,7 +45,7 @@ div.back {  /*Don't use "p", use "div" here.*/
 .t2{background-color: #D39899;}
 
 .content{
-    clear: right;
+    clear: both;
     font-family: : Arial, Helvetica, sans-serif;
     color: black;
     margin-left: 10px;
