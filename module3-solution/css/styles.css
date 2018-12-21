@@ -1,7 +1,11 @@
 /** HEADER **/
+* {
+  box-sizing: border-box;
+}
+
 #header-nav {
   background-color: #999999;
-  /*height: 100px;   /*Don't change the hight of header-nav, or the menu expand will not work fine.*/
+  /*height: 2em;   /*Don't change the hight of header-nav, or the menu expand will not work fine.*/
   border-radius: 0;
   border: 0;
 }
@@ -15,6 +19,7 @@
   position: absolute;
   top: 0px;
   left: 40px;
+  margin-bottom: 20px;
 }
 .navbar-brand a:hover, .navbar-brand a:focus {
   text-decoration: none;
@@ -83,4 +88,9 @@
   }
   /* End Header */
 
+}
+
+@media (min-width: 768px) {
+  #header-nav {
+  height: 80px;
 }
