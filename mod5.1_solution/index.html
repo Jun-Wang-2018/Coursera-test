@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Lunch Checker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles/bootstrap.min.css">
+  <style>
+    .message { font-size: 1em; font-weight: bold; }
+    </style>
+</head>
+<script src="angular.min.js"></script>
+<script src="app.js">
+
+</script>
+
+<body ng-app="LunchCheck">
+  <div class="container">
+    <h1>Lunch Checker</h1>
+    <div ng-controller='LunchCheckController'>
+      <div class="form-group">
+        <input ng-model="lunchMenu" type="text" ng-style="borderColor" placeholder="list comma separated dishes you usually have for lunch" class="form-control">
+        <span ng-style="fontColor">{{message}}</span>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-default" ng-click="checkMenu()">Check If Too Much</button>
+      </div>
+    </div>
+    <div class="form-group message">
+      <!-- Your message can go here. -->
+      <span>
+        Note: Empty item is not counted. For example: item 1, item2,,item3 or item 1, item2, ,item3 are both counted 3 items.
+      </span>
+    </div>
+  </div>
+
+</body>
+
+</html>
