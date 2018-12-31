@@ -27,12 +27,13 @@ function FoundItemsDirectiveController() {
 
   list.empty = function () {
     // console.log(list.items);
-    if (list.items == []) {
+    if (list.items.length==0) {
       return true;
     }else{
       return false;
     }
   };
+
 }
 
 
@@ -43,7 +44,10 @@ function NarrowItDownController(MenuSearchService) {
   list.found = [];
 
   list.search = function () {
-    // list.found = [];
+    if (list.found!==[]) {
+      list.found.splice(0, list.found.length);
+    }
+
     var promise = MenuSearchService.getMatchedMenuItems();
     promise.then(function (response) {
       var allitems = response.data.menu_items;
