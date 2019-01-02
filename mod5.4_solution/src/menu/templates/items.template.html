@@ -1,5 +1,12 @@
 <ul ng-controller='ItemsController as itemsctrl'>
-  <li ng-repeat="item2 in itemsctrl.itemsList">
-    short_name:{{ item2.short_name }}, name: {{ item2.name }}, description: {{ item2.description }}
+  <li ng-repeat="item in itemsctrl.itemsList">
+    <div>{{ item.short_name }}</div>
+    <div>{{ item.name }}</div>
+    <div>{{ item.description }}</div>
+    <div>price_small: {{ item.price_small }}</div>
+    <div>price_large: {{ item.price_large }}</div>
+    <!-- <div>small_portion_name: {{ item.small_portion_name }}</div> -->
+    <!-- <div>large_portion_name: {{ item.large_portion_name }}</div> -->
+    <div>   </div>
   </li>
 </ul>

@@ -21,3 +21,10 @@ li[ui-sref]:hover {
   padding-left: 5px;
   padding-right: 5px;
 }
+
+p{
+  font-size: 0.7em;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: normal;
+}
