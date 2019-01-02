@@ -6,9 +6,9 @@ angular.module('Data')
   templateUrl: 'src/menu/templates/categories.template.html',
   // controller: CategoriesController,
   // controllerAs: 'categoriesctrl',
-  bindings: {
-    categoryList: '<'
-  }
+  // bindings: {
+    // categoryList: '<'
+  // }
 });
 // console.log(categoryList);
 // CategoriesController.$inject = ['MenuDataService', 'categoryList']

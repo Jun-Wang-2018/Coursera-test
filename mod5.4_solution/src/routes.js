@@ -22,30 +22,25 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
   .state('categories', {
     url: '/categories',
     templateUrl: 'src/menu/templates/main-categories.template.html',
-    // controller: "CategoriesController as categoriesctrl", // as categories
-    // component: categories,
-    resolve: {
-      categoryList: ['MenuDataService', function (MenuDataService) {
-        return MenuDataService.getMenuCategories().data;
-      }]
-    }
+    controller: "CategoriesController as categoriesctrl", // as categories
+    // resolve: {
+    //   categoryList: ['MenuDataService', function (MenuDataService) {
+    //     return MenuDataService.getMenuCategories();
+    //   }]
+    // }
   })
 
-  .state('categories.items', {
+  .state('items', {
     url: '/detail/{categoryShortName}',
-    templateUrl: 'src/menu/templates/items.template.html',
-    // controller: "ItemsController as itemsctrl", //as items
-    // component: items,
-    resolve: {
-      itemList: ['MenuDataService', function (MenuDataService) {
-        return MenuDataService.getItemsForCategory({categoryShortName});
-      }]
-    }
+    templateUrl: 'src/menu/templates/main-items.template.html',
+    controller: "ItemsController as itemsctrl", //as items
+    // resolve: {
+    //   itemList: ['MenuDataService', function (MenuDataService) {
+    //     return MenuDataService.getItemsForCategory({categoryShortName});
+    //   }]
+    // }
   });
-
 }
-
-
 
 
 })();

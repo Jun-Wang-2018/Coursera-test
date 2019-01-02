@@ -2,22 +2,23 @@
 'use strict';
 
 angular.module('Data')
+// .controller('MenuCategoriesController', MenuCategoriesController)
 .service('MenuDataService', MenuDataService);
+
 
 MenuDataService.$inject = ['$http'];
 function MenuDataService($http) {
   var service = this;
 
   service.getMenuCategories = function () {
-    $http({
+    var response = $http({
       method: "GET",
       url: ("https://davids-restaurant.herokuapp.com/categories.json")
-    }).then(function(response) {
-        service.alllitems =  response.data;
-      });
-      var result = service.alllitems;
-        // console.log($scope.allitems);
-    return result;
+    });
+
+      return response;
+    // console.log(response);
+    // return response;
   };
 
   service.getItemsForCategory = function (categoryShortName) {
