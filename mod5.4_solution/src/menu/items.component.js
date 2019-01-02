@@ -6,9 +6,9 @@ angular.module('Data')
   templateUrl: 'src/menu/templates/items.template.html',
   // controller: ItemsController,
   // controllerAs: 'itemsctrl',
-  bindings: {
-    name: '<'
-  }
+  // bindings: {
+  //    name: '<'
+  // }
 });
 
 // ItemsController.$inject = ['MenuDataService']

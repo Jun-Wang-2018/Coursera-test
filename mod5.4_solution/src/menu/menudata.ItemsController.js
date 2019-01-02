@@ -8,6 +8,7 @@ ItemsController.$inject = ['$stateParams','MenuDataService']
 function ItemsController($stateParams, MenuDataService) {
   var itemDetail = this;
   var short_name = $stateParams.categoryShortName;
+  // var name = $stateParams.categoryName;
 
   var promise = MenuDataService.getItemsForCategory(short_name);
 
@@ -16,6 +17,9 @@ function ItemsController($stateParams, MenuDataService) {
       // console.log(itemDetail.itemsList);
     })
 
+  itemDetail.categoryShortName = short_name;
+  // itemDetail.categoryName = name;
+  // console.log(short_name)
   // itemDetail.name = item.name;
   // itemDetail.quantity = item.quantity;
   // itemDetail.description = item.description;

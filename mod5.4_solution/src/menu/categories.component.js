@@ -7,7 +7,7 @@ angular.module('Data')
   // controller: CategoriesController,
   // controllerAs: 'categoriesctrl',
   // bindings: {
-    // categoryList: '<'
+    // name: '<'
   // }
 });
 // console.log(categoryList);
