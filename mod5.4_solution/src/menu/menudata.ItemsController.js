@@ -14,6 +14,7 @@ function ItemsController($stateParams, MenuDataService) {
 
   promise.then(function (response) {
       itemDetail.itemsList = response.data.menu_items;
+      itemDetail.categoryName = response.data.category.name;
       // console.log(itemDetail.itemsList);
     })
 
