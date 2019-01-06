@@ -35,18 +35,15 @@ function SignUpService($http, ApiPath) {
   };
 
   service.getFavoriteItem = function (shorname) {
-    if (shorname!=="") {
-      return $http.get(ApiPath + '/menu_items/' + shorname + '.json')
-        .then(function (response) {
-           // console.log(response.data);
-          return response.data;
-        })
-        .catch(function (error) {
-          // console.log(error);
-          return "error"
-        });
-    }
-
+    return $http.get(ApiPath + '/menu_items/' + shorname + '.json')
+      .then(function (response) {
+         // console.log(response.data);
+        return response.data;
+      })
+      .catch(function (error) {
+        // console.log(error);
+        return "error"
+      });
   };
 
 }

@@ -1,52 +1,52 @@
 <link rel="stylesheet" href="css/styles.css">
 <div class="container">
   <div class="row">
-    <section class="col-sm-6">
+    <section class="col-sm-12">
       <fieldset>
         <legend>Sign Up</legend>
         <form name='signUpForm' novalidate>
 
-          <input type="text" name="firstname" placeholder="First Name" ng-model="signUpCtrl.user.firstname" required minlength="2" ng-maxlength="10">
+          <input type="text" name="firstname" placeholder="First Name" ng-model="signUpCtrl.user.firstname" required minlength="1" ng-maxlength="10">
           <!-- {{ signUpCtrl.user.firstname }} -->
           <span ng-if="(signUpForm.firstname.$error.minlength || signUpForm.firstname.$error.required) && signUpForm.firstname.$touched">
-            <div>Firstname must be at least 2 characters long.</div>
+            Firstname must be at least 1 characters long
           </span>
           <span ng-if="signUpForm.firstname.$error.maxlength && signUpForm.firstname.$touched">
-            <div>Firstname must not be longer than 10 characters</div>
+            Firstname must not be longer than 10 characters
           </span>
           <br>
 
-          <input type="text" name="lastname" placeholder="Last Name" ng-model="signUpCtrl.user.lastname" required minlength="2" ng-maxlength="10">
+          <input type="text" name="lastname" placeholder="Last Name" ng-model="signUpCtrl.user.lastname" required minlength="1" ng-maxlength="10">
           <!-- {{ signUpCtrl.user.lastname }} -->
           <span ng-if="(signUpForm.lastname.$error.minlength || signUpForm.lastname.$error.required) && signUpForm.lastname.$touched">
-            <div>Lastname must be at least 2 characters long.</div>
+            Lastname must be at least 1 characters long
           </span>
           <span ng-if="signUpForm.firstname.$error.maxlength && signUpForm.firstname.$touched">
-            <div>Lastname must not be longer than 10 characters</div>
+            Lastname must not be longer than 10 characters
           </span>
           <br>
 
           <input type="email" name="email" placeholder="Email" ng-model="signUpCtrl.user.email" required>
           <span ng-if="signUpForm.email.$invalid && signUpForm.email.$touched">
-            <div>Must be a valid email address: handle@domain format</div>
+            Must be a valid email address: handle@domain format
           </span>
           <br>
 
           <input type="text" name="phone" placeholder="Phone ###-###-####" ng-model="signUpCtrl.user.phone" pattern="(\d{3})-(\d{3})-(\d{4})" required>
           <span ng-if="signUpForm.phone.$invalid && signUpForm.phone.$touched">
-            <div>Phone must be in the format ###-###-####.</div>
+            Phone must be in the format ###-###-####.
           </span>
           <br>
 
-          <input type="text" name="favoritedish_shortname" placeholder="Favorite Dish" ng-model="signUpCtrl.user.favoritedish_shortname" pattern="(\w{1,2})(\d{1,2})" required>
+          <input type="text" name="favoritedish_shortname" placeholder="Favorite Dish" ng-model="signUpCtrl.user.favoritedish_shortname" pattern="(\w{1,2})(\d{1,2})">
           <span ng-if="signUpForm.favoritedish_shortname.$invalid && signUpForm.favoritedish_shortname.$touched">
-            <div>Menu number of your favorite dish must be in the format like A3 or SP8.</div>
+            Short name of your favorite dish must be in the format like A3 or SP8.
           </span>
 
           <br>
 
           <button id='submit' ng-disabled="signUpForm.$invalid" ng-click="signUpCtrl.submit()"
-          ui-sref='public.signup.myinfo({itemShortName: signUpCtrl.capitalize(signUpCtrl.user.favoritedish_shortname)})'>
+          ui-sref='public.myinfo.item({itemShortName: signUpCtrl.capitalize(signUpCtrl.user.favoritedish_shortname)})'>
             Submit
           </button>
 
@@ -65,9 +65,9 @@
         Favorite Dish: {{ signUpCtrl.user.favoritedish_shortname }} <br> -->
       </div>
     </section>
-    <section class="col-sm-6">
-      <ui-view></ui-view>
-    </section>
+    <!-- <section class="col-sm-6">
+      <ui-view>Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a></ui-view>
+    </section> -->
   </div>
 </div>
 

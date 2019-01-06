@@ -29,13 +29,13 @@
         <p class="menu-item-details">{{myInfoCtrl.favoriteItem.description}}</p>
       </div>
       <div ng-if="myInfoCtrl.favoriteItem == 'error'">
-          No such menu number exists!
+        No such menu number exists!
       </div>
 
     </div>
-    <!-- <div ng-if="!signUpCtrl.completed">
-  Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a>
-</div> -->
+    <div ng-if="!signUpCtrl.completed">
+      Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a>
+    </div>
 
   </form>
 </fieldset>
