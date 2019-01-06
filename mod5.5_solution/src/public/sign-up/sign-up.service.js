@@ -8,14 +8,6 @@ SignUpService.$inject = ['$http', 'ApiPath'];
 function SignUpService($http, ApiPath) {
   var service = this;
 
-  // service.newuser = {
-  //   firstname: firstname,
-  //   lastname:lastname,
-  //   email:email,
-  //   phone:phone,
-  //   favoritedish:favoritedish
-  // }
-
   var signedUser = [];
 
   service.addUser = function (firstname,lastname,email,phone,favoritedish) {
@@ -38,11 +30,9 @@ function SignUpService($http, ApiPath) {
     if (shorname!=="") {
       return $http.get(ApiPath + '/menu_items/' + shorname + '.json')
         .then(function (response) {
-           // console.log(response.data);
           return response.data;
         })
         .catch(function (error) {
-          // console.log(error);
           return "error"
         });
     }

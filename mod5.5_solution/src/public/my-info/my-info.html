@@ -9,13 +9,6 @@
       Phone: {{ signUpCtrl.user.phone }} <br>
       Favorite Dish: {{ signUpCtrl.user.favoritedish_shortname }} <br>
       <hr>
-      <!-- Favorite Dish: <br>
-  Short name: {{ myInfoCtrl.favoriteItem.short_name }} <br>
-  Name: {{ myInfoCtrl.favoriteItem.name }} <br>
-  description: {{ myInfoCtrl.favoriteItem.description }} <br>
-  <hr>
-  <img class="img-responsive" width="250" height="150" ng-src="{{myInfoCtrl.basePath}}/images/{{ myInfoCtrl.favoriteItem.short_name }}.jpg" alt="{{ myInfoCtrl.favoriteItem.name }}">
-  <hr> -->
 
       <div class="col-sm-5" ng-if="myInfoCtrl.favoriteItem !== 'error'">
         <div class="menu-item-photo">
@@ -33,8 +26,9 @@
       </div>
 
     </div>
-    <div ng-if="!signUpCtrl.completed">
-      Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a>
+    <div id="notsigned" ng-if="!signUpCtrl.completed">
+      <div>Not Signed Up Yet.</div>
+      <a id="signuparrow" ui-sref="public.signup">&lt;&lt;&lt;Sign up Now!</a>
     </div>
 
   </form>

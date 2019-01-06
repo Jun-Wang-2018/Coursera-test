@@ -9,6 +9,13 @@ legend{
   color:white;
   font-size: 26px;
 }
+#notsigned{
+  font-size: 22px;
+}
+#signuparrow{
+  color:white;
+  /* font-size: 22px; */
+}
 input {
   font-size: 24px;
   margin-bottom: 10px;
@@ -20,12 +27,10 @@ button {
 
 .ng-touched.ng-valid {
   border: 2px green solid;
-  /* background-color: #962047; */
 }
 
 .ng-touched.ng-invalid {
   border: 2px red solid;
-  /* background-color: #962047; */
 }
 
 #submit{

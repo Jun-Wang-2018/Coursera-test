@@ -14,7 +14,6 @@ function routeConfig ($stateProvider) {
     .state('public', {
       abstract: true,
       templateUrl: 'src/public/public.html'
-      // controller: 'PublicController as publicCtrl'
     })
     .state('public.home', {
       url: '/',
