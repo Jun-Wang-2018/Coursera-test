@@ -16,6 +16,14 @@ function SignUpController(SignUpService, $filter) {
     return capitalized_text;
   };
 
+  // signUpCtrl.verify = function (inputtedname) {
+  //   if (service.getFavoriteItem(signUpCtrl.capitalize(inputtedname))!=='error') {
+  //     signUpCtrl.verifyresult = "Menu number is verified."
+  //   } else {
+  //     signUpCtrl.verifyresult = "No such menu number exists!"
+  //   }
+  // };
+
   signUpCtrl.submit = function () {
     signUpCtrl.completed = true;
   };

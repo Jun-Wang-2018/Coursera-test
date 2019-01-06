@@ -38,10 +38,11 @@
           </span>
           <br>
 
-          <input type="text" name="favoritedish_shortname" placeholder="Favorite Dish" ng-model="signUpCtrl.user.favoritedish_shortname" pattern="(\w{1,2})(\d{1,2})" required>
+          <input type="text" name="favoritedish_shortname" placeholder="Favorite Dish" ng-model="signUpCtrl.user.favoritedish_shortname" pattern="(\w{1,2})(\d{1,2})">
           <span ng-if="signUpForm.favoritedish_shortname.$invalid && signUpForm.favoritedish_shortname.$touched">
             Short name of your favorite dish must be in the format like A3 or SP8.
           </span>
+
           <br>
 
           <button id='submit' ng-disabled="signUpForm.$invalid" ng-click="signUpCtrl.submit()"
